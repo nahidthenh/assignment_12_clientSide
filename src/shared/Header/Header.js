@@ -36,21 +36,9 @@ const Header = () => {
               <Nav.Link as={HashLink} to="/collections">
                 Collections
               </Nav.Link>
-              {user.email && (
-                <Nav.Link as={HashLink} to="/addservices">
-                  Add Collection
-                </Nav.Link>
-              )}
-              {user.email && (
-                <Nav.Link as={HashLink} to="/offer">
-                  Manage Offer
-                </Nav.Link>
-              )}
-              {user.email && (
-                <Nav.Link as={HashLink} to="/myOrder">
-                  My Order
-                </Nav.Link>
-              )}
+              
+             
+              
               <Nav.Link as={HashLink} to="/blog">
                 Blog
               </Nav.Link>

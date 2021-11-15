@@ -43,9 +43,9 @@ const ProductDetails = () => {
           <div className="row my-5">
             <div className="col-md-6">
               <img className="w-50" src={service.img} alt="" />
+              <h3>{service?.name}</h3>
               <p>{service?.description}</p>
-              <h1>{service?.name}</h1>
-              <h1> {service?.price}</h1>
+              <h3> {service?.price}</h3>
             </div>
             <div className="col-md-6">
               <form onSubmit={handleSubmit(onSubmit)}>
