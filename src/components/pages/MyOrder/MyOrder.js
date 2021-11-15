@@ -8,13 +8,13 @@ const MyOrder = () => {
   const { user } = useAuth();
 
   useEffect(() => {
-    fetch(`http://localhost:9000/myOrder/${user?.email}`)
+    fetch(`https://polar-cliffs-11688.herokuapp.com/myOrder/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
     // console.log(data);
   }, [user?.email]);
   const handleDelete = (id) => {
-    const url = `http://localhost:9000//myOrder/${id}`;
+    const url = `https://polar-cliffs-11688.herokuapp.com//myOrder/${id}`;
     fetch(url, {
       method: "DELETE",
     })

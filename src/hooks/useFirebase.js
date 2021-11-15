@@ -38,8 +38,8 @@ const useFirebase = () => {
         updateProfile(auth.currentUser, {
           displayName: name,
         })
-          .then(() => {})
-          .catch((error) => {});
+          .then(() => { })
+          .catch((error) => { });
         history.replace("/");
       })
       .catch((error) => {
@@ -96,7 +96,7 @@ const useFirebase = () => {
   }, []);
 
   useEffect(() => {
-    fetch(`http://localhost:9000/users/${user.email}`)
+    fetch(`https://polar-cliffs-11688.herokuapp.com/users/${user.email}`)
       .then((res) => res.json())
       .then((data) => setAdmin(data.admin));
   }, [user.email]);
@@ -115,7 +115,7 @@ const useFirebase = () => {
 
   const saveUser = (email, displayName, method) => {
     const user = { email, displayName };
-    fetch("http://localhost:9000/users", {
+    fetch("https://polar-cliffs-11688.herokuapp.com/users", {
       method: method,
       headers: {
         "content-type": "application/json",

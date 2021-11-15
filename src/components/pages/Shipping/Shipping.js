@@ -14,7 +14,7 @@ const Shipping = () => {
   const onSubmit = (data) => {
     console.log(data);
 
-    fetch("http://localhost:9000/orders", {
+    fetch("https://polar-cliffs-11688.herokuapp.com/orders", {
       method: "POST",
       headers: {
         "content-type": "application/json",

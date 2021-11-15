@@ -11,7 +11,7 @@ const ManageAllOrders = () => {
 
   console.log(status);
   useEffect(() => {
-    fetch("http://localhost:9000/allOrders")
+    fetch("https://polar-cliffs-11688.herokuapp.com/allOrders")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);
@@ -24,7 +24,7 @@ const ManageAllOrders = () => {
 
   const onSubmit = (data) => {
     console.log(data, orderId);
-    fetch(`http://localhost:9000/statusUpdate/${orderId}`, {
+    fetch(`https://polar-cliffs-11688.herokuapp.com/statusUpdate/${orderId}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

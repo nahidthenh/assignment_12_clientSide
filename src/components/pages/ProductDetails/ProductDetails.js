@@ -19,7 +19,7 @@ const ProductDetails = () => {
   const onSubmit = (data) => {
     data.email = user?.email;
     data.status = "pending";
-    fetch("http://localhost:9000/addOrders", {
+    fetch("https://polar-cliffs-11688.herokuapp.com/addOrders", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -31,7 +31,7 @@ const ProductDetails = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:9000/services/${serviceId}`)
+    fetch(`https://polar-cliffs-11688.herokuapp.com/services/${serviceId}`)
       .then((res) => res.json())
       .then((data) => setService(data));
   }, []);

@@ -6,7 +6,7 @@ const ReviewItem = (service) => {
   const { register, handleSubmit } = useForm();
   const { user } = useAuth();
   const onSubmit = (data) => {
-    fetch("http://localhost:9000/addReview", {
+    fetch("https://polar-cliffs-11688.herokuapp.com/addReview", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

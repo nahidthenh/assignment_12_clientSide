@@ -5,12 +5,12 @@ const ManageProducts = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:9000/services`)
+    fetch(`https://polar-cliffs-11688.herokuapp.com/services`)
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
   const handleDelete = (id) => {
-    const url = `http://localhost:9000/services/${id}`;
+    const url = `https://polar-cliffs-11688.herokuapp.com/services/${id}`;
     fetch(url, {
       method: "DELETE",
     })

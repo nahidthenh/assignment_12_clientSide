@@ -12,7 +12,7 @@ const AddServices = () => {
   const onSubmit = (data) => {
     console.log(data);
 
-    axios.post("http://localhost:9000/services", data).then((res) => {
+    axios.post("https://polar-cliffs-11688.herokuapp.com/services", data).then((res) => {
       if (res.data.insertedId) {
         console.log(data);
         alert("Added successfully");

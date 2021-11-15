@@ -12,7 +12,7 @@ const MakeAdmin = () => {
   };
   const handleAdminSubmit = (e) => {
     const user = { email };
-    fetch("http://localhost:9000/users/admin", {
+    fetch("https://polar-cliffs-11688.herokuapp.com/users/admin", {
       method: "PUT",
       headers: {
         authorization: `Bearer ${token}`,
