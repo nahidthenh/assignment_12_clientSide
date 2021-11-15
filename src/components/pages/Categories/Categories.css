@@ -1,0 +1,21 @@
+.categories {
+  background-color: #ededed;
+}
+
+.col-md-4.cat img {
+  height: 300px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+
+  padding: 15px;
+}
+
+.cat-item {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.col-md-4.cat {
+  border-radius: 5px;
+
+}
